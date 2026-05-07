@@ -33,7 +33,7 @@ jobs:
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/devops-demo-app:v1 .
 
       - name: Push Image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-demo-app:v1
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-demo-app
 
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v0.1.6
